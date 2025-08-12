@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import ComingSoonProjects from "../components/coming-soon-projects"
+
 import AboutMe from "../components/about-me"
 import ScrollProgress from "../components/scroll-progress"
 
@@ -65,74 +65,127 @@ export default function Portfolio() {
   }, [isDark])
 
   const projects = [
+    // 🏆 TIER 1: FEATURED SHOWCASE PROJECT
     {
-      title: "Avaxan Pharmacy",
-      description:
-        "Full-stack e-commerce site for pharmacy business. Includes AI medicine scanner, chat assistant, secure auth, admin dashboard.",
-      tech: ["MERN", "Tailwind", "AI", "JWT"],
-      github: "private",
-      live: "https://avaxan-pharma.vercel.app",
-      isPrivate: true,
+      id: 1,
+      name: "Avaxan Pharmacy",
+      description: "A comprehensive pharmacy management system built from scratch during my internship at Avaxan Pharmacy startup. Features include inventory management, prescription tracking, and customer portal.",
       image: "/projects/avaxan-pharmacy.png",
-    },
-    {
-      title: "RSA Digital Signature Web App",
-      description: "Verifies RSA-SHA256 digital signatures with blockchain immutability simulation.",
-      tech: ["React", "Tailwind"],
-      github: "https://github.com/GovindSingh-95/RSA-Digital-Signature-with-BCT.git",
-      live: "https://v0-frontend-redesign-six.vercel.app/",
-      image: "/projects/rsa-digital-signature.png",
-    },
-    {
-      title: "Diffie-Hellman Demo",
-      description: "Cryptography education tool with MITM attack simulation and live benchmarking.",
-      tech: ["React", "TypeScript", "Web Crypto API"],
-      github: "https://github.com/GovindSingh-95/Diffie_Hellman.git",
-      live: "https://v0-diffie-hellman-design.vercel.app/",
-      image: "/projects/diffie-hellman-demo.png",
-    },
-    {
-      title: "PokéNest",
-      description: "Advanced Pokédex + battle simulator. Includes stat calculators, PWA features, and offline support.",
-      tech: ["Next.js", "Recharts", "Tailwind"],
-      github: "https://github.com/GovindSingh-95/PokeNest.git",
-      live: "https://v0-pokedex-website.vercel.app/",
-      image: "/projects/pokenest.png",
-    },
-    {
-      title: "FocusNet",
-      description: "AI-powered productivity dashboard with goal tracking and streak monitoring.",
-      tech: ["React", "Node.js"],
-      github: "https://github.com/GovindSingh-95/FocusNet.git",
-      live: "https://spark-your-day-hub.lovable.spp",
-      image: "/projects/focusnet.png",
-    },
-    {
-      title: "Zephry Dev Tools",
-      description: "Utility toolkit for developers – color picker, JSON prettifier, markdown converter, and more.",
-      tech: ["HTML", "CSS", "JS"],
-      github: "https://github.com/GovindSingh-95/Zephry-Dev-tools.git",
-      live: "https://utility-zen-hub.lovable.app/",
-      image: "/projects/zephry-dev-tools.png",
-    },
-    {
-      title: "WeatherMood",
-      description: "Weather app with animated UI based on mood and weather.",
-      tech: ["JS", "HTML", "CSS"],
-      github: "https://github.com/GovindSingh-95/WeatherMood.git",
-      live: "https://sunny-side-up-quotes.lovable.app",
-      image: "/projects/weathermood.png",
-    },
-    {
-      title: "Game Hub",
-      description: "Web game platform with AI-enhanced games (Tetris, 2048, Snake, etc.) and performance tracking.",
-      tech: ["HTML", "JS", "Adaptive AI Logic"],
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      live: "https://avaxan-pharmacy.vercel.app",
       github: undefined,
-      live: "https://v0-tic-tac-toe-game-rose.vercel.app/",
-      image: "/projects/game-hub.png",
       isPrivate: true,
+      tier: "featured",
+      highlight: "Solo Project • Startup Internship • Full-Stack"
     },
-  ]
+    // 🚀 TIER 2: CONCEPT LEARNING PROJECTS
+    {
+      id: 2,
+      name: "Pokenest",
+      description: "A Pokemon database and information hub built to learn API integration and modern web development concepts.",
+      image: "/projects/pokenest.png",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "PokeAPI"],
+      live: "https://v0-pokedex-website.vercel.app/",
+      github: "https://github.com/GovindSingh-95/PokeNest",
+      tier: "concept"
+    },
+    {
+      id: 3,
+      name: "Game Hub",
+      description: "A collection of classic games including Tic-Tac-Toe, built to master game development concepts and state management.",
+      image: "/projects/game-hub.png",
+      technologies: ["React", "JavaScript", "CSS3", "Game Logic"],
+      live: "https://v0-tic-tac-toe-game-rose.vercel.app/",
+      github: undefined,
+      isPrivate: true,
+      tier: "concept"
+    },
+    {
+      id: 4,
+      name: "RSA Encryption",
+      description: "A frontend redesign project focused on implementing and visualizing RSA encryption algorithms and cryptographic concepts.",
+      image: "/projects/rsa-digital-signature.png?v=1",
+      technologies: ["React", "JavaScript", "Cryptography", "UI/UX"],
+      live: "https://v0-frontend-redesign-six.vercel.app/",
+      github: "https://github.com/GovindSingh-95/RSA-Encryption",
+      tier: "concept"
+    },
+    {
+      id: 5,
+      name: "Diffie-Hellman",
+      description: "An interactive demonstration of the Diffie-Hellman key exchange protocol, built to understand cryptographic key exchange concepts.",
+      image: "/projects/diffie-hellman-demo.png?v=1",
+      technologies: ["React", "JavaScript", "Cryptography", "Interactive Learning"],
+      live: "https://v0-diffie-hellman-design.vercel.app/",
+      github: "https://github.com/GovindSingh-95/Diffie-Hellman",
+      tier: "concept"
+    },
+    // ✨ TIER 3: COMPLETED PROJECTS
+    {
+      id: 6,
+      name: "Zephry",
+      description: "A utility hub application designed to provide various helpful tools and services in one centralized platform.",
+      image: "/projects/zephry-dev-tools.png?v=1",
+      technologies: ["React", "Node.js", "Utility APIs", "Modern UI"],
+      live: "https://utility-zen-hub.lovable.app/",
+      github: "https://github.com/GovindSingh-95/Zephry",
+      tier: "completed"
+    },
+    {
+      id: 7,
+      name: "FocusNest",
+      description: "A productivity and focus management application to help users stay organized and maintain concentration.",
+      image: "/projects/focusnet.png?v=1",
+      technologies: ["React", "Productivity Tools", "Time Management", "UI/UX"],
+      live: "https://spark-your-day-hub.lovable.app",
+      github: "https://github.com/GovindSingh-95/FocusNest",
+      tier: "completed"
+    },
+    {
+      id: 8,
+      name: "WeatherMood",
+      description: "A weather application that combines meteorological data with mood-enhancing features and inspirational quotes.",
+      image: "/projects/weathermood.png",
+      technologies: ["React", "Weather APIs", "Mood Enhancement", "Responsive Design"],
+      live: "https://sunny-side-up-quotes.lovable.app",
+      github: "https://github.com/GovindSingh-95/WeatherMood",
+      tier: "completed"
+    },
+    // 🔧 TIER 4: COMING SOON PROJECTS
+    {
+      id: 9,
+      name: "Fetchly",
+      description: "A modern grocery delivery website using the MERN stack, currently in development during my internship.",
+      image: "/projects/fetchly.png",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "MERN Stack"],
+      live: undefined,
+      github: "https://github.com/GovindSingh-95/Fetchly",
+      tier: "coming-soon",
+      status: "Developing"
+    },
+    {
+      id: 10,
+      name: "RideRyde",
+      description: "A ride-sharing platform concept designed for modern urban transportation needs.",
+      image: "/projects/ride-ryde.png",
+      technologies: ["React", "Node.js", "Real-time", "Maps API", "Payment Integration"],
+      live: undefined,
+      github: "https://github.com/GovindSingh-95/RideRyde",
+      tier: "coming-soon",
+      status: "In Planning"
+    },
+    {
+      id: 11,
+      name: "TradeKart",
+      description: "An e-commerce platform concept focusing on seamless trading and marketplace functionality.",
+      image: "/projects/trade-kart.png",
+      technologies: ["React", "Node.js", "E-commerce", "Payment Gateway", "Inventory Management"],
+      live: undefined,
+      github: "https://github.com/GovindSingh-95/TradeKart",
+      tier: "coming-soon",
+      status: "In Planning"
+    }
+  ];
 
   const skills = {
     languages: ["Java", "JavaScript", "TypeScript", "Python", "HTML/CSS", "Bash"],
@@ -359,17 +412,235 @@ export default function Portfolio() {
               <p className="text-xl text-gray-600 dark:text-gray-300">A showcase of my recent work and contributions</p>
             </div>
 
+            {/* 🏆 TIER 1: FEATURED SHOWCASE PROJECT */}
+            <div className="mb-16">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white rounded-full text-sm font-semibold mb-3">
+                  🏆 FEATURED PROJECT
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Startup Internship Achievement</h3>
+                <p className="text-gray-600 dark:text-gray-300">My solo project built from scratch during my internship</p>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+                {projects.filter(p => p.tier === "featured").map((project, index) => (
+                  <Card
+                    key={project.id}
+                    className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-blue-900/20 border-2 border-blue-200 dark:border-blue-700 overflow-hidden shadow-lg"
+                  >
+                    {/* Project Image */}
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} project screenshot`}
+                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                          // Fallback to a styled placeholder if image fails to load
+                          const target = e.currentTarget;
+                          target.style.display = 'none';
+                          const placeholder = target.nextElementSibling as HTMLElement;
+                          if (placeholder) placeholder.style.display = 'flex';
+                        }}
+                      />
+                      {/* Fallback Placeholder */}
+                      <div 
+                        className="w-full h-64 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center"
+                        style={{ display: 'none' }}
+                      >
+                        <div className="text-center">
+                          <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <Code className="w-8 h-8 text-white" />
+                          </div>
+                          <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{project.name}</p>
+                          <p className="text-xs text-gray-500 dark:text-gray-500">Screenshot Coming Soon</p>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      
+                      {/* Highlight Badge */}
+                      <div className="absolute top-4 left-4">
+                        <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white border-0 px-3 py-1">
+                          {project.highlight}
+                        </Badge>
+                      </div>
+                    </div>
+
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between text-2xl">
+                        {project.name}
+                        <div className="flex space-x-2">
+                          {!project.isPrivate && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+                              aria-label={`View ${project.name} on GitHub`}
+                            >
+                              <Github className="h-5 w-5" />
+                            </a>
+                          )}
+                          {project.live && (
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+                              aria-label={`View ${project.name} live demo`}
+                            >
+                              <ExternalLink className="h-5 w-5" />
+                            </a>
+                          )}
+                        </div>
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 dark:text-gray-300 text-lg">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary" className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      {project.isPrivate && (
+                        <div className="text-sm text-gray-500 dark:text-gray-400 italic">
+                          * Private repository
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* 🚀 TIER 2: CONCEPT LEARNING PROJECTS */}
+            <div className="mb-16">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full text-sm font-semibold mb-3">
+                  🚀 CONCEPT PROJECTS
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 dark:text-white">Learning & Skill Development</h3>
+                <p className="text-gray-600 dark:text-gray-300">Projects built to master specific concepts and technologies</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                {projects.filter(p => p.tier === "concept").map((project, index) => (
+                  <Card
+                    key={project.id}
+                    className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 overflow-hidden"
+                  >
+                    {/* Project Image */}
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={`${project.name} project screenshot`}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                        onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                          // Fallback to a styled placeholder if image fails to load
+                          const target = e.currentTarget;
+                          target.style.display = 'none';
+                          const placeholder = target.nextElementSibling as HTMLElement;
+                          if (placeholder) placeholder.style.display = 'flex';
+                        }}
+                      />
+                      {/* Fallback Placeholder */}
+                      <div 
+                        className="w-full h-48 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center"
+                        style={{ display: 'none' }}
+                      >
+                        <div className="text-center">
+                          <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <Code className="w-8 h-8 text-white" />
+                          </div>
+                          <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{project.name}</p>
+                          <p className="text-xs text-gray-500 dark:text-gray-500">Screenshot Coming Soon</p>
+                        </div>
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+
+                    <CardHeader>
+                      <CardTitle className="flex items-center justify-between">
+                        {project.name}
+                        <div className="flex space-x-2">
+                          {!project.isPrivate && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+                              aria-label={`View ${project.name} on GitHub`}
+                            >
+                              <Github className="h-4 w-4" />
+                            </a>
+                          )}
+                          {project.live && (
+                            <a
+                              href={project.live}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+                              aria-label={`View ${project.name} live demo`}
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                            </a>
+                          )}
+                        </div>
+                      </CardTitle>
+                      <CardDescription className="text-gray-600 dark:text-gray-300">
+                        {project.description}
+                      </CardDescription>
+                    </CardHeader>
+                  <CardContent>
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary" className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      {project.isPrivate && (
+                        <div className="text-sm text-gray-500 dark:text-gray-400 italic">
+                          * Private repository
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ✨ TIER 3: COMPLETED PROJECTS */}
+        <section id="completed-projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full text-sm font-semibold mb-3">
+                ✨ COMPLETED PROJECTS
+              </div>
+              <h2 className="text-4xl font-bold mb-4">Additional Portfolio Work</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300">More projects showcasing my diverse skills and interests</p>
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.map((project, index) => (
+              {projects.filter(p => p.tier === "completed").map((project, index) => (
                 <Card
-                  key={index}
+                  key={project.id}
                   className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 overflow-hidden"
                 >
                   {/* Project Image */}
                   <div className="relative overflow-hidden">
                     <img
                       src={project.image}
-                      alt={`${project.title} project screenshot`}
+                      alt={`${project.name} project screenshot`}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
@@ -389,7 +660,7 @@ export default function Portfolio() {
                         <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                           <Code className="w-8 h-8 text-white" />
                         </div>
-                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{project.title}</p>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{project.name}</p>
                         <p className="text-xs text-gray-500 dark:text-gray-500">Screenshot Coming Soon</p>
                       </div>
                     </div>
@@ -398,7 +669,7 @@ export default function Portfolio() {
 
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between">
-                      {project.title}
+                      {project.name}
                       <div className="flex space-x-2">
                         {!project.isPrivate && (
                           <a
@@ -406,7 +677,7 @@ export default function Portfolio() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
-                            aria-label={`View ${project.title} on GitHub`}
+                            aria-label={`View ${project.name} on GitHub`}
                           >
                             <Github className="h-4 w-4" />
                           </a>
@@ -417,7 +688,7 @@ export default function Portfolio() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
-                            aria-label={`View ${project.title} live demo`}
+                            aria-label={`View ${project.name} live demo`}
                           >
                             <ExternalLink className="h-4 w-4" />
                           </a>
@@ -429,19 +700,18 @@ export default function Portfolio() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((tech, techIndex) => (
-                        <Badge
-                          key={techIndex}
-                          variant="secondary"
-                          className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors duration-200"
-                        >
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="secondary" className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200">
                           {tech}
                         </Badge>
                       ))}
                     </div>
+                    
                     {project.isPrivate && (
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">* Private repository</p>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 italic">
+                        * Private repository
+                      </div>
                     )}
                   </CardContent>
                 </Card>
@@ -619,8 +889,106 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Coming Soon Projects Section */}
-        <ComingSoonProjects />
+
+
+        {/* 🔧 TIER 4: COMING SOON PROJECTS */}
+        <section id="coming-soon" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-full text-sm font-semibold mb-3">
+                🔧 COMING SOON PROJECTS
+              </div>
+              <h2 className="text-4xl font-bold mb-4">Future Endeavors</h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300">Projects currently in development and planning phase</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projects.filter(p => p.tier === "coming-soon").map((project, index) => (
+                <Card
+                  key={project.id}
+                  className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 overflow-hidden"
+                >
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={`${project.name} project screenshot`}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                        // Fallback to a styled placeholder if image fails to load
+                        const target = e.currentTarget;
+                        target.style.display = 'none';
+                        const placeholder = target.nextElementSibling as HTMLElement;
+                        if (placeholder) placeholder.style.display = 'flex';
+                      }}
+                    />
+                    {/* Fallback Placeholder */}
+                    <div 
+                      className="w-full h-48 bg-gradient-to-br from-orange-100 to-red-100 dark:from-orange-900/20 dark:to-red-900/20 flex items-center justify-center"
+                      style={{ display: 'none' }}
+                    >
+                      <div className="text-center">
+                        <div className="w-16 h-16 mx-auto mb-2 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                          <Code className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-400">{project.name}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-500">Screenshot Coming Soon</p>
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    
+                    {/* Status Badge */}
+                    <div className="absolute top-4 left-4">
+                      <Badge className={`${
+                        project.status === "Developing" 
+                          ? "bg-green-500 text-white" 
+                          : "bg-blue-500 text-white"
+                      } border-0 px-3 py-1`}>
+                        {project.status === "Developing" ? "🚀 Developing" : "🔧 In Planning"}
+                      </Badge>
+                    </div>
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between">
+                      {project.name}
+                      <div className="flex space-x-2">
+                        {project.github && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-blue-600 transition-colors duration-200 transform hover:scale-110"
+                            aria-label={`View ${project.name} on GitHub`}
+                          >
+                            <Github className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
+                    </CardTitle>
+                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                      {project.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="secondary" className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-200">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    
+                    <div className="text-sm text-gray-500 dark:text-gray-400 italic">
+                      {project.status === "Developing" ? "Currently in development" : "Planning phase"}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Leadership Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -630,7 +998,7 @@ export default function Portfolio() {
               <p className="text-xl text-gray-600 dark:text-gray-300">Community involvement and leadership roles</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="text-xl">Senior Coordinator</CardTitle>
@@ -646,12 +1014,27 @@ export default function Portfolio() {
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="text-xl">Member</CardTitle>
-                  <CardDescription className="text-blue-600 dark:text-blue-400">ACM Student Chapter</CardDescription>
+                  <CardDescription className="text-blue-400">ACM Student Chapter</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 dark:text-gray-300">
                     Active participant in ACM activities, contributing to technical discussions and knowledge sharing.
                   </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <CardTitle className="text-xl">Organising Committee – Tech Dept</CardTitle>
+                  <CardDescription className="text-green-600 dark:text-green-400">TeamCodelocked_BMSCE</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Organizing technical events and managing the tech department initiatives for TeamCodelocked at BMSCE.
+                  </p>
+                  <div className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    Oct 2024 - Present
+                  </div>
                 </CardContent>
               </Card>
             </div>
