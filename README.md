@@ -1,60 +1,110 @@
 # 🚀 Govind Singh - Portfolio Website
 
-A modern, responsive portfolio website showcasing my full-stack development skills, projects, and professional experience.
+A modern, responsive portfolio website showcasing my full-stack development skills, projects, and professional experience. Built with Next.js 15, React 19, and Tailwind CSS.
 
-## ✨ Features
+## ✨ **Latest Updates** ✨
+
+### 🆕 **New Features (January 2025)**
+- **🏆 Tiered Project Structure**: Featured, Concept, Completed, and Coming Soon projects
+- **🎯 Enhanced Navigation**: Improved section flow and smooth scrolling
+- **👥 Leadership Section**: Added TeamCodelocked_BMSCE organizing committee role
+- **🖼️ Image Optimization**: Cache-busting and fallback placeholders
+- **🔧 All Issues Resolved**: Fixed build errors, navigation flow, and broken links
+- **📱 Mobile-First Design**: Optimized for all device sizes
+
+## ✨ **Core Features**
 
 ### 🎨 **Modern Design & UX**
 - **Responsive Design**: Mobile-first approach with Tailwind CSS
 - **Dark/Light Mode**: Smooth theme switching with system preference detection
 - **Smooth Animations**: CSS animations and transitions for enhanced user experience
 - **Accessibility**: ARIA labels, keyboard navigation, and screen reader support
+- **Scroll Progress**: Visual scroll indicator for better navigation
 
 ### 🛠️ **Technical Excellence**
-- **Next.js 15**: Latest React framework with App Router
-- **React 19**: Modern React with concurrent features
-- **TypeScript**: Type-safe development throughout
-- **Tailwind CSS**: Utility-first CSS framework
+- **Next.js 15.2.4**: Latest React framework with App Router
+- **React 19.1.1**: Modern React with concurrent features
+- **TypeScript 5.9.2**: Type-safe development throughout
+- **Tailwind CSS 3.4.17**: Utility-first CSS framework
 - **shadcn/ui**: Beautiful, accessible UI components
+- **Lucide React**: Modern icon library
 
-### 📱 **Portfolio Sections**
-- **Hero Section**: Professional introduction with call-to-action
-- **About Me**: Detailed background, skills, and interests
-- **Projects**: Showcase of 8+ production-ready applications
-- **Experience**: Professional journey and internships
-- **Skills**: Technical expertise and competencies
-- **Coming Soon**: Future projects in development
-- **Contact**: Professional contact information
+## 🎯 **Project Showcase - Tiered Structure**
 
-## 🎯 **Featured Projects**
+### 🏆 **TIER 1: FEATURED SHOWCASE PROJECTS**
 
-### 🏥 **Avaxan Pharmacy** (Private)
+#### 🏥 **Avaxan Pharmacy** ⭐
 - **Live Demo**: [https://avaxan-pharma.vercel.app](https://avaxan-pharma.vercel.app)
-- **Tech Stack**: MERN, Tailwind, AI, JWT
+- **Tech Stack**: React, Node.js, MongoDB, Express
+- **Highlights**: Solo Project • Startup Internship • Full-Stack
 - **Features**: AI medicine scanner, chat assistant, secure auth, admin dashboard
+- **Status**: Production-ready, deployed on Vercel
 
-### 🎮 **PokéNest**
+### 🚀 **TIER 2: CONCEPT LEARNING PROJECTS**
+
+#### 🎮 **PokéNest**
 - **Live Demo**: [https://v0-pokedex-website.vercel.app](https://v0-pokedex-website.vercel.app)
-- **GitHub**: [https://github.com/GovindSingh-95/PokeNest.git](https://github.com/GovindSingh-95/PokeNest.git)
-- **Tech Stack**: Next.js, Recharts, Tailwind
+- **GitHub**: [https://github.com/GovindSingh-95/PokeNest](https://github.com/GovindSingh-95/PokeNest)
+- **Tech Stack**: React, TypeScript, Tailwind CSS, PokeAPI
 - **Features**: Advanced Pokédex, battle simulator, PWA features
 
-### 🔐 **RSA Digital Signature Web App**
+#### 🎯 **Game Hub** 🔒
+- **Live Demo**: [https://v0-tic-tac-toe-game-rose.vercel.app](https://v0-tic-tac-toe-game-rose.vercel.app)
+- **Tech Stack**: React, JavaScript, CSS3, Game Logic
+- **Features**: Classic games collection, Tic-Tac-Toe, state management
+- **Status**: Private repository
+
+#### 🔐 **RSA Digital Signature Web App**
 - **Live Demo**: [https://v0-frontend-redesign-six.vercel.app](https://v0-frontend-redesign-six.vercel.app)
-- **GitHub**: [https://github.com/GovindSingh-95/RSA-Digital-Signature-with-BCT.git](https://github.com/GovindSingh-95/RSA-Digital-Signature-with-BCT.git)
+- **GitHub**: [https://github.com/GovindSingh-95/RSA-Digital-Signature-with-BCT](https://github.com/GovindSingh-95/RSA-Digital-Signature-with-BCT)
 - **Tech Stack**: React, Tailwind
 - **Features**: RSA-SHA256 verification, blockchain immutability
 
-### 🔑 **Diffie-Hellman Demo**
+#### 🔑 **Diffie-Hellman Demo**
 - **Live Demo**: [https://v0-diffie-hellman-design.vercel.app](https://v0-diffie-hellman-design.vercel.app)
-- **GitHub**: [https://github.com/GovindSingh-95/Diffie_Hellman.git](https://github.com/GovindSingh-95/Diffie_Hellman.git)
+- **GitHub**: [https://github.com/GovindSingh-95/Diffie_Hellman](https://github.com/GovindSingh-95/Diffie_Hellman)
 - **Tech Stack**: React, TypeScript, Web Crypto API
 - **Features**: MITM attack simulation, live benchmarking
 
-### 🛒 **Fetchly** (In Development)
+### ✅ **TIER 3: COMPLETED PROJECTS**
+
+#### 🛠️ **Zephry Dev Tools**
+- **Live Demo**: [https://v0-zephry-dev-tools.vercel.app](https://v0-zephry-dev-tools.vercel.app)
+- **GitHub**: [https://github.com/GovindSingh-95/Zephry-Dev-Tools](https://github.com/GovindSingh-95/Zephry-Dev-Tools)
+- **Tech Stack**: React, TypeScript, Tailwind CSS
+- **Features**: Developer productivity tools, code utilities
+
+#### 🎯 **FocusNest**
+- **Live Demo**: [https://v0-focusnest.vercel.app](https://v0-focusnest.vercel.app)
+- **GitHub**: [https://github.com/GovindSingh-95/FocusNest](https://github.com/GovindSingh-95/FocusNest)
+- **Tech Stack**: React, TypeScript, Tailwind CSS
+- **Features**: Focus timer, productivity tracking, Pomodoro technique
+
+#### 🌤️ **WeatherMood**
+- **Live Demo**: [https://v0-weathermood.vercel.app](https://v0-weathermood.vercel.app)
+- **GitHub**: [https://github.com/GovindSingh-95/WeatherMood](https://github.com/GovindSingh-95/WeatherMood)
+- **Tech Stack**: React, TypeScript, Tailwind CSS, Weather API
+- **Features**: Weather app with mood-based recommendations
+
+### 🚧 **TIER 4: COMING SOON PROJECTS**
+
+#### 🛒 **Fetchly** 🚀
 - **Status**: Currently developing as Software Development Intern
 - **Tech Stack**: MERN Stack, Google Maps API, Socket.io, Tailwind
 - **Features**: Hyperlocal medicine delivery, real-time tracking, vendor panel
+- **Progress**: In active development
+
+#### 🚗 **RideRyde** 🔧
+- **Status**: In Planning Phase
+- **Tech Stack**: React, Node.js, MongoDB, Real-time features
+- **Features**: Ride-sharing platform, driver-passenger matching
+- **Progress**: Planning and architecture design
+
+#### 💼 **TradeKart** 🔧
+- **Status**: In Planning Phase
+- **Tech Stack**: Next.js, TypeScript, E-commerce platform
+- **Features**: Online marketplace, vendor management, secure payments
+- **Progress**: Initial planning and requirements gathering
 
 ## 🚀 **Getting Started**
 
@@ -132,8 +182,8 @@ The portfolio is fully responsive and optimized for:
 
 ### **Personal Information**
 Update the following files to customize your portfolio:
-- `app/page.tsx` - Main content and projects
-- `components/about-me.tsx` - About section
+- `app/page.tsx` - Main content, projects, and tiered structure
+- `components/about-me.tsx` - About section and personal details
 - `app/layout.tsx` - Metadata and global settings
 
 ### **Styling**
@@ -146,15 +196,18 @@ Update the following files to customize your portfolio:
 - **Lighthouse Score**: Optimized for performance
 - **Core Web Vitals**: All metrics in green
 - **Bundle Size**: Optimized with Next.js
-- **Image Optimization**: Next.js Image component
+- **Image Optimization**: Next.js Image component with fallback placeholders
+- **Build Optimization**: Clean builds with no webpack errors
 
 ## 🌟 **Features in Detail**
 
-### **Navigation**
+### **Navigation & UX**
 - Smooth scrolling between sections
-- Active section highlighting
+- Active section highlighting with scroll tracking
 - Mobile-responsive navigation menu
 - Scroll progress indicator
+- Back-to-top button
+- Optimized section flow
 
 ### **Theme System**
 - Dark/light mode toggle
@@ -163,20 +216,34 @@ Update the following files to customize your portfolio:
 - Persistent theme selection
 
 ### **Project Showcase**
-- High-quality project screenshots
-- Live demo links
-- GitHub repository links
-- Technology badges
-- Detailed descriptions
+- **Tiered Structure**: Featured, Concept, Completed, Coming Soon
+- High-quality project screenshots with fallback placeholders
+- Live demo links to deployed applications
+- GitHub repository links (where applicable)
+- Technology badges and detailed descriptions
+- Project status indicators
 
 ### **Contact Section**
 - Professional contact information
-- Social media links
+- Social media links (GitHub, LinkedIn)
 - Contact form (UI ready for backend integration)
+- Direct email and phone contact
+
+## 🎓 **Professional Experience**
+
+### **Internships**
+- **Avaxan Pharmacy** - Software Development Intern
+- **Fetchly** - Software Development Intern (Current)
+
+### **Leadership & Activities**
+- **TeamCodelocked_BMSCE** - Organising Committee – Tech Dept (Oct 2024 - Present)
 
 ## 🤝 **Contributing**
 
-This is a personal portfolio project, but suggestions and feedback are welcome!
+This is a personal portfolio project, but suggestions and feedback are welcome! Feel free to:
+- Report bugs or issues
+- Suggest improvements
+- Share feedback on design or functionality
 
 ## 📄 **License**
 
@@ -187,9 +254,10 @@ This project is open source and available under the [MIT License](LICENSE).
 - **Portfolio**: [https://your-portfolio-url.com](https://your-portfolio-url.com)
 - **GitHub**: [https://github.com/GovindSingh-95](https://github.com/GovindSingh-95)
 - **LinkedIn**: [https://linkedin.com/in/govind-singh-526409293](https://linkedin.com/in/govind-singh-526409293)
+- **Email**: [avaxanpharmacare@gmail.com](mailto:avaxanpharmacare@gmail.com)
 
 ---
 
 **Built with ❤️ using Next.js, React, and Tailwind CSS**
 
-*Last updated: January 2025*
+*Last updated: January 2025 - Complete Portfolio Overhaul*
