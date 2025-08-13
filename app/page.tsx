@@ -72,7 +72,7 @@ export default function Portfolio() {
       description: "A comprehensive pharmacy management system built from scratch during my internship at Avaxan Pharmacy startup. Features include inventory management, prescription tracking, and customer portal.",
       image: "/projects/avaxan-pharmacy.png",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
-      live: "https://avaxan-pharmacy.vercel.app",
+      live: "https://avaxan-pharma.vercel.app/",
       github: undefined,
       isPrivate: true,
       tier: "featured",
