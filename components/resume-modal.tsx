@@ -18,18 +18,14 @@ Email: govind.s9551@gmail.com | Phone: +91 8788414070
 GitHub: github.com/GovindSingh-95 | LinkedIn: linkedin.com/in/govindsingh95
 
 EXPERIENCE 
-Software Development Intern — Brisons International 
-August 2025 – Present
-- Solo-developed a full-stack pharmacy e-commerce website (MERN stack). 
-- Implemented AI-based medicine scanner for product identification. 
-- Integrated secure auth, order tracking, and product management dashboard. 
-- Developed a custom AI chatbot for order help, product queries, and user support. 
-- Live at avaxan-pharma.vercel.app
+Software Development Intern — Egg Bucket 
+Apr 2026 – Present
+- Developing a B2B AP supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Supabase triggers.
 
 TECHNICAL SKILLS 
 Languages: Java, JavaScript, TypeScript, Python, HTML/CSS, Bash 
 Frameworks: React, Next.js, Tailwind, Node, Express, MongoDB 
-Tools: Git, Web Crypto API | Focus: Full-Stack Dev, Cryptography, DSA (400+ LC) 
+Tools: Git, Web Crypto API | Focus: Full-Stack Dev, Cryptography, DSA (500+ LC) 
 
 PROJECTS 
 RSA Digital Signature Web App – React, Tailwind 
@@ -114,14 +110,36 @@ Senior Coordinator in Code<I/O> | ACM Chapter Member – BMSCE`
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4 border-b-2 border-blue-600 pb-2">EXPERIENCE</h2>
             <div className="mb-4">
-              <h3 className="text-xl font-semibold">Software Development Intern — Brisons International</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-2">August 2025 – Present</p>
+              <h3 className="text-xl font-semibold">Software Development Intern — Egg Bucket</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-2">Mar 2026 – Present (Current)</p>
               <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-                <li>Solo-developed a full-stack pharmacy e-commerce website (MERN stack).</li>
-                <li>Implemented AI-based medicine scanner for product identification.</li>
-                <li>Integrated secure auth, order tracking, and product management dashboard.</li>
-                <li>Developed a custom AI chatbot for order help, product queries, and user support.</li>
-                <li>Live at avaxan-pharma.vercel.app</li>
+                <li>Developing a B2B supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Firebase triggers</li>
+              </ul>
+            </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold">Full Stack Web Development — WebStack Academy</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-2">Dec 2025 – Jan 2026</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                <li>Upskilled in Full Stack web development</li>
+              </ul>
+            </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold">Software Development Intern — Brisons International</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-2">Oct 2025 – Mar 2026</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                <li>Developed MERN-based PWA supporting 1000+ products with responsive UI</li>
+                <li>Reduced catalog load time by 25% through backend and query optimization</li>
+                <li>Implemented API workflows for orders, payments, and inventory management</li>
+              </ul>
+            </div>
+            <div className="mb-4">
+              <h3 className="text-xl font-semibold">Software Engineering Intern — Avaxan Pharma</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-2">Jun 2025 – Sep 2025</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                <li>Developed a MERN-based pharmacy platform for 250+ SKUs, improving catalog load speed by 25%</li>
+                <li>Implemented UI/backend workflows and integrated an AI health chatbot for user assistance</li>
+                <li>Built backend APIs to handle high-concurrency requests with efficient performance</li>
+                <li>Deployed and maintained applications using CI/CD pipelines with Docker containerization</li>
               </ul>
             </div>
           </div>
@@ -141,7 +159,7 @@ Senior Coordinator in Code<I/O> | ACM Chapter Member – BMSCE`
               <div>
                 <h4 className="font-semibold mb-2">Tools & Focus:</h4>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Git, Web Crypto API | Full-Stack Dev, Cryptography, DSA (400+ LC)
+                  Git, Web Crypto API | Full-Stack Dev, Cryptography, DSA (500+ LC)
                 </p>
               </div>
             </div>
@@ -180,7 +198,7 @@ Senior Coordinator in Code<I/O> | ACM Chapter Member – BMSCE`
             <h2 className="text-2xl font-bold mb-4 border-b-2 border-blue-600 pb-2">COURSES & ACHIEVEMENTS</h2>
             <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
               <li>Pokémon World Championships 2025 Invite (Regional Winner)</li>
-              <li>Generative AI (Amazon/Coursera), DSA in Java (PW Skills), 400+ LeetCode</li>
+              <li>Generative AI (Amazon/Coursera), DSA in Java (PW Skills), 500+ LeetCode</li>
             </ul>
           </div>
 

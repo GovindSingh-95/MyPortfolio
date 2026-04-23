@@ -10,10 +10,12 @@ export default function AboutMe() {
   const [activeTab, setActiveTab] = useState("overview")
 
   const skills = {
-    languages: ["Java", "JavaScript", "TypeScript", "Python"],
-    frontend: ["React", "Next.js", "Tailwind CSS"],
-    backend: ["Node.js", "Express", "MongoDB"],
-    specialized: ["Cryptography", "Web Crypto API", "Git", "DSA (400+ LC)"],
+    languages: ["JavaScript (ES6+)", "TypeScript", "Java", "Python", "C"],
+    frameworks: ["React", "Next.js", "Node.js", "Express", "Redux Toolkit", "Socket.io"],
+    ui: ["Tailwind CSS", "shadcn/ui"],
+    databases: ["MongoDB", "PostgreSQL", "Supabase", "Firebase (Firestore)"],
+    tools: ["Docker", "Git", "GitHub Actions (CI/CD)", "Postman", "Linux"],
+    concepts: ["REST APIs", "PWA", "Web Crypto API", "AI/LLM Integration", "Blockchain", "Razorpay Integration"],
   }
 
   const projects = [
@@ -73,7 +75,7 @@ export default function AboutMe() {
                   <Briefcase className="w-5 h-5 text-green-500" />
                   <div>
                     <p className="font-medium">Software Development Intern</p>
-                    <p className="text-sm">Brisons International</p>
+                    <p className="text-sm">Egg Bucket</p>
                   </div>
                 </div>
 
@@ -89,11 +91,11 @@ export default function AboutMe() {
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">Quick Stats</p>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
-                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">8+</p>
+                      <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">10+</p>
                       <p className="text-xs text-gray-500">Projects</p>
                     </div>
                     <div>
-                      <p className="text-2xl font-bold text-green-600 dark:text-green-400">400+</p>
+                      <p className="text-2xl font-bold text-green-600 dark:text-green-400">500+</p>
                       <p className="text-xs text-gray-500">LeetCode</p>
                     </div>
                   </div>
@@ -142,15 +144,29 @@ export default function AboutMe() {
                       </p>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                         Currently interning at{" "}
-                        <span className="font-semibold text-green-600 dark:text-green-400">Brisons International</span>,
-                        where I'm building Fetchly - a comprehensive grocery delivery platform with real-time product
-                        browsing, secure payment integration, and mobile-first design for future PWA deployment.
+                        <span className="font-semibold text-green-600 dark:text-green-400">Egg Bucket</span>,
+                        where I'm developing a B2B AP supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Supabase triggers.
                       </p>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        With <span className="font-semibold">8+ full-stack projects</span> under my belt and
-                        <span className="font-semibold"> 400+ LeetCode problems</span> solved, I'm always eager to
+                        With <span className="font-semibold">10+ full-stack projects</span> under my belt and
+                        <span className="font-semibold"> 500+ LeetCode problems</span> solved, I'm always eager to
                         tackle new challenges and contribute to innovative solutions.
                       </p>
+                      <hr className="my-4 border-gray-200 dark:border-gray-700" />
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">🏆 Achievements</h4>
+                          <p className="text-gray-600 dark:text-gray-300">Invited Participant, Pokémon World Championship 2025</p>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">📜 Certifications</h4>
+                          <p className="text-gray-600 dark:text-gray-300">AWS Certified Solutions Architect (2026) | Docker Fundamentals – Coursera (2025) | DSA – PW Skills (2023)</p>
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">💼 Soft Skills</h4>
+                          <p className="text-gray-600 dark:text-gray-300">Leadership, Analytical Thinking, Product Ownership, Agile Collaboration</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
@@ -205,7 +221,7 @@ export default function AboutMe() {
 
                 {activeTab === "experience" && (
                   <div className="space-y-6 animate-fade-in">
-                    <h3 className="text-2xl font-bold mb-6">Current Focus</h3>
+                    <h3 className="text-2xl font-bold mb-6">Experience</h3>
 
                     {/* Current Internship */}
                     <div className="border-l-4 border-green-500 pl-6 mb-8">
@@ -218,40 +234,80 @@ export default function AboutMe() {
                         </Badge>
                       </div>
                       <p className="text-green-600 dark:text-green-400 font-medium mb-3">
-                        Brisons International • August 2025 – Present
+                        Egg Bucket (Mar 2026 - Present)
                       </p>
                       <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                         <li className="flex items-start space-x-2">
                           <ChevronRight className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
-                          <span>Building Fetchly - a modern grocery delivery platform using MERN stack</span>
-                        </li>
-                        <li className="flex items-start space-x-2">
-                          <ChevronRight className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
-                          <span>Developing responsive UI with real-time product browsing and checkout flow</span>
-                        </li>
-                        <li className="flex items-start space-x-2">
-                          <ChevronRight className="w-4 h-4 mt-1 text-green-500 flex-shrink-0" />
-                          <span>Architecting scalable backend systems for payments and inventory management</span>
+                          <span>Developing a B2B supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Firebase triggers</span>
                         </li>
                       </ul>
                     </div>
 
-                    {/* Previous Internship */}
+                    {/* WebStack Academy */}
+                    <div className="border-l-4 border-purple-500 pl-6 mb-8">
+                      <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                        Full Stack Web Development
+                      </h4>
+                      <p className="text-purple-600 dark:text-purple-400 font-medium mb-3">
+                        WebStack Academy • Dec 2025 – Jan 2026
+                      </p>
+                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-purple-500 flex-shrink-0" />
+                          <span>Upskilled in Full Stack web development</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Previous Internship - Brisons */}
+                    <div className="border-l-4 border-blue-500 pl-6 mb-8">
+                      <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                        Software Development Intern
+                      </h4>
+                      <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
+                        Brisons International • Oct 2025 – Mar 2026
+                      </p>
+                      <ul className="space-y-2 text-gray-600 dark:text-gray-300">
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
+                          <span>Developed MERN-based PWA supporting 1000+ products with responsive UI</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
+                          <span>Reduced catalog load time by 25% through backend and query optimization</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
+                          <span>Implemented API workflows for orders, payments, and inventory management</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* Previous Internship - Avaxan */}
                     <div className="border-l-4 border-blue-500 pl-6 mb-8">
                       <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
                         Software Engineering Intern
                       </h4>
                       <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
-                        Avaxan Pharma • June - August 2025
+                        Avaxan Pharma • Jun 2025 – Sep 2025
                       </p>
                       <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                         <li className="flex items-start space-x-2">
                           <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
-                          <span>Solo-developed full-stack pharmacy e-commerce platform</span>
+                          <span>Developed a MERN-based pharmacy platform for 250+ SKUs, improving catalog load speed by 25%</span>
                         </li>
                         <li className="flex items-start space-x-2">
                           <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
-                          <span>Implemented AI-powered medicine scanner and intelligent chatbot</span>
+                          <span>Implemented UI/backend workflows and integrated an AI health chatbot for user assistance</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
+                          <span>Built backend APIs to handle high-concurrency requests with efficient performance</span>
+                        </li>
+                        <li className="flex items-start space-x-2">
+                          <ChevronRight className="w-4 h-4 mt-1 text-blue-500 flex-shrink-0" />
+                          <span>Deployed and maintained applications using CI/CD pipelines with Docker containerization</span>
                         </li>
                       </ul>
                     </div>

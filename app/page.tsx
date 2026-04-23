@@ -69,7 +69,7 @@ export default function Portfolio() {
     {
       id: 1,
       name: "Avaxan Pharmacy",
-      description: "A comprehensive pharmacy management system built from scratch during my internship at Avaxan Pharmacy startup. Features include inventory management, prescription tracking, and customer portal.",
+      description: "• Developed a MERN-based pharmacy platform for 250+ SKUs, improving catalog load speed by 25%\n• Implemented UI/backend workflows and integrated an AI health chatbot for user assistance\n• Built backend APIs to handle high-concurrency requests with efficient performance\n• Deployed and maintained applications using CI/CD pipelines with Docker containerization",
       image: "/projects/avaxan-pharmacy.png",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       live: "https://avaxan-pharma.vercel.app/",
@@ -77,6 +77,29 @@ export default function Portfolio() {
       isPrivate: true,
       tier: "featured",
       highlight: "Solo Project • Startup Internship • Full-Stack"
+    },
+    {
+      id: 9,
+      name: "Fetchly",
+      description: "• Developed MERN-based PWA supporting 1000+ products with responsive UI\n• Reduced catalog load time by 25% through backend and query optimization\n• Implemented API workflows for orders, payments, and inventory management",
+      image: "/projects/fetchly.png",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "MERN Stack"],
+      live: undefined,
+      github: undefined,
+      isPrivate: true,
+      tier: "featured",
+      highlight: "Internship Project • Full-Stack • PWA"
+    },
+    {
+      id: 12,
+      name: "Lobby Dex",
+      description: "• Built a low-latency orchestration platform supporting 100+ concurrent users with real-time updates under 200ms via Firestore listeners\n• Optimized system performance and data synchronization for raid lobby coordination",
+      image: "/projects/Lobby-Dex.png",
+      technologies: ["React", "Firebase", "Firestore", "Real-time"],
+      live: "https://lobby-dex.vercel.app/",
+      github: undefined,
+      tier: "featured",
+      highlight: "Real-time Platform • High-concurrency • Low-latency"
     },
     // 🚀 TIER 2: CONCEPT LEARNING PROJECTS
     {
@@ -153,17 +176,6 @@ export default function Portfolio() {
     },
     // 🔧 TIER 4: COMING SOON PROJECTS
     {
-      id: 9,
-      name: "Fetchly",
-      description: "A modern grocery delivery website using the MERN stack, currently in development during my internship.",
-      image: "/projects/fetchly.png",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "MERN Stack"],
-      live: undefined,
-      github: "https://github.com/GovindSingh-95/Fetchly",
-      tier: "coming-soon",
-      status: "Developing"
-    },
-    {
       id: 10,
       name: "RideRyde",
       description: "A ride-sharing platform concept designed for modern urban transportation needs.",
@@ -184,14 +196,27 @@ export default function Portfolio() {
       github: "https://github.com/GovindSingh-95/TradeKart",
       tier: "coming-soon",
       status: "In Planning"
+    },
+    {
+      id: 12,
+      name: "Egg Bucket Intern Project",
+      description: "Developing a B2B supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Firebase triggers.",
+      image: "/projects/egg-bucket.png",
+      technologies: ["React", "Firebase", "Node.js", "Supply-Chain", "Automation"],
+      live: undefined,
+      github: undefined,
+      tier: "coming-soon",
+      status: "Developing"
     }
   ];
 
   const skills = {
-    languages: ["Java", "JavaScript", "TypeScript", "Python", "HTML/CSS", "Bash"],
-    frameworks: ["React", "Next.js", "Tailwind", "Node.js", "Express", "MongoDB"],
-    tools: ["Git", "Web Crypto API", "VS Code"],
-    focus: ["Full-stack Dev", "Cryptography", "AI Tools", "DSA (400+ LeetCode)"],
+    languages: ["JavaScript (ES6+)", "TypeScript", "Java", "Python", "C"],
+    frameworks: ["React", "Next.js", "Node.js", "Express", "Redux Toolkit", "Socket.io"],
+    ui: ["Tailwind CSS", "shadcn/ui"],
+    databases: ["MongoDB", "PostgreSQL", "Supabase", "Firebase (Firestore)"],
+    tools: ["Docker", "Git", "GitHub Actions (CI/CD)", "Postman", "Linux"],
+    concepts: ["REST APIs", "PWA", "Web Crypto API", "AI/LLM Integration", "Blockchain", "Razorpay Integration"],
   }
 
   const scrollToSection = (sectionId: string) => {
@@ -325,7 +350,7 @@ export default function Portfolio() {
                   <div className="absolute -right-1 top-0 w-0.5 h-full bg-blue-600 animate-blink"></div>
                 </div>
                 <p className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-8 animate-slide-up animation-delay-200">
-                  Full-Stack Developer | Cryptography Enthusiast | Software Development Intern @ Brisons International
+                  Full-Stack Developer | Cryptography Enthusiast | Software Development Intern @ Egg Bucket
                 </p>
               </div>
 
@@ -335,7 +360,7 @@ export default function Portfolio() {
                     I'm a full-stack developer passionate about building production-ready software with performance,
                     cryptographic security, and real-world impact. I've led development of pharmacy e-commerce
                     platforms, cryptographic demos, and AI-integrated systems. I'm currently a Software Development
-                    Intern at Brisons International, building Fetchly - a modern grocery delivery platform.
+                    Intern at Egg Bucket, developing a B2B AP supply-chain system reducing manual inventory management.
                   </p>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent animate-shimmer"></div>
                 </div>
@@ -422,7 +447,7 @@ export default function Portfolio() {
                 <p className="text-gray-600 dark:text-gray-300">My solo project built from scratch during my internship</p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {projects.filter(p => p.tier === "featured").map((project, index) => (
                   <Card
                     key={project.id}
@@ -433,7 +458,7 @@ export default function Portfolio() {
                       <img
                         src={project.image}
                         alt={`${project.name} project screenshot`}
-                        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-64 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                         onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                           // Fallback to a styled placeholder if image fails to load
@@ -539,7 +564,7 @@ export default function Portfolio() {
                       <img
                         src={project.image}
                         alt={`${project.name} project screenshot`}
-                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full h-48 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                         onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                           // Fallback to a styled placeholder if image fails to load
@@ -641,7 +666,7 @@ export default function Portfolio() {
                     <img
                       src={project.image}
                       alt={`${project.name} project screenshot`}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                         // Fallback to a styled placeholder if image fails to load
@@ -736,7 +761,7 @@ export default function Portfolio() {
                     <div>
                       <CardTitle className="text-2xl">Software Development Intern</CardTitle>
                       <CardDescription className="text-lg text-green-600 dark:text-green-400">
-                        Brisons International • August 2025 – Present
+                        Egg Bucket (Mar 2026 - Present)
                       </CardDescription>
                     </div>
                     <Badge
@@ -751,46 +776,81 @@ export default function Portfolio() {
                   <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Currently building Fetchly, a modern grocery delivery website using the MERN stack
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Developing responsive UI for real-time product browsing, cart, and checkout flow
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Architecting backend systems for payment integration, order tracking, and scalable inventory
-                      management
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Prioritizing mobile-first design for seamless PWA/WebView compatibility in future app deployment
+                      Developing a B2B supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Firebase triggers
                     </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              {/* Previous Internship */}
+              {/* WebStack Academy */}
+              <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-purple-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Full Stack Web Development</CardTitle>
+                  <CardDescription className="text-lg text-purple-600 dark:text-purple-400">
+                    WebStack Academy • Dec 2025 – Jan 2026
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Upskilled in Full Stack web development
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Previous Internship - Brisons */}
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-blue-500">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Software Engineering Intern</CardTitle>
+                  <CardTitle className="text-2xl">Software Development Intern</CardTitle>
                   <CardDescription className="text-lg text-blue-600 dark:text-blue-400">
-                    Avaxan Pharma • June 2025 – August 2025
+                    Brisons International • Oct 2025 – Mar 2026
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3 text-gray-600 dark:text-gray-300">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Solo-developed pharmacy e-commerce website using MERN stack
+                      Developed MERN-based PWA supporting 1000+ products with responsive UI
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Built AI-based medicine scanner & AI chatbot for customer assistance
+                      Reduced catalog load time by 25% through backend and query optimization
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Implemented secure authentication, admin dashboard, and order tracking system
+                      Implemented API workflows for orders, payments, and inventory management
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              {/* Previous Internship - Avaxan */}
+              <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300 border-l-4 border-l-blue-500">
+                <CardHeader>
+                  <CardTitle className="text-2xl">Software Engineering Intern</CardTitle>
+                  <CardDescription className="text-lg text-blue-600 dark:text-blue-400">
+                    Avaxan Pharma • Jun 2025 – Sep 2025
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-300">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Developed a MERN-based pharmacy platform for 250+ SKUs, improving catalog load speed by 25%
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Implemented UI/backend workflows and integrated an AI health chatbot for user assistance
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Built backend APIs to handle high-concurrency requests with efficient performance
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      Deployed and maintained applications using CI/CD pipelines with Docker containerization
                     </li>
                   </ul>
                 </CardContent>
@@ -809,7 +869,7 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="text-lg">Languages</CardTitle>
@@ -850,6 +910,44 @@ export default function Portfolio() {
 
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
+                  <CardTitle className="text-lg">UI</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.ui.map((skill, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="border-indigo-200 dark:border-indigo-800 text-indigo-800 dark:text-indigo-200 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 transition-colors duration-200"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
+                  <CardTitle className="text-lg">Databases</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.databases.map((skill, index) => (
+                      <Badge
+                        key={index}
+                        variant="outline"
+                        className="border-cyan-200 dark:border-cyan-800 text-cyan-800 dark:text-cyan-200 hover:bg-cyan-100 dark:hover:bg-cyan-900/30 transition-colors duration-200"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <CardHeader>
                   <CardTitle className="text-lg">Tools</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -869,11 +967,11 @@ export default function Portfolio() {
 
               <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <CardHeader>
-                  <CardTitle className="text-lg">Focus Areas</CardTitle>
+                  <CardTitle className="text-lg">Concepts</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {skills.focus.map((skill, index) => (
+                    {skills.concepts.map((skill, index) => (
                       <Badge
                         key={index}
                         variant="outline"
@@ -913,7 +1011,7 @@ export default function Portfolio() {
                     <img
                       src={project.image}
                       alt={`${project.name} project screenshot`}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-48 object-contain bg-gray-100 dark:bg-gray-800 group-hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
                         // Fallback to a styled placeholder if image fails to load
