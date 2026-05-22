@@ -11,52 +11,13 @@ export function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   if (!isOpen) return null
 
   const downloadResume = () => {
-    const resumeContent = `Govind Singh 
-B.Tech, BMS College of Engineering, Bengaluru (Expected 2027) 
-Senior Coordinator in <Code/IO> | Member, ACM Student Chapter 
-Email: govind.s9551@gmail.com | Phone: +91 8788414070 
-GitHub: github.com/GovindSingh-95 | LinkedIn: linkedin.com/in/govindsingh95
-
-EXPERIENCE 
-Software Development Intern — Egg Bucket 
-Apr 2026 – Present
-- Developing a B2B AP supply-chain system across 15+ nodes, reducing manual inventory by 15% through automated Supabase triggers.
-
-TECHNICAL SKILLS 
-Languages: Java, JavaScript, TypeScript, Python, HTML/CSS, Bash 
-Frameworks: React, Next.js, Tailwind, Node, Express, MongoDB 
-Tools: Git, Web Crypto API | Focus: Full-Stack Dev, Cryptography, DSA (500+ LC) 
-
-PROJECTS 
-RSA Digital Signature Web App – React, Tailwind 
-Built a frontend to verify RSA-SHA256 signatures with simulated blockchain immutability. 
-Used in cryptography workshops to demonstrate digital signing. GitHub 
-
-PokéNest – Next.js, Recharts, PWA 
-Advanced Pokédex and team builder with offline support, stat calculators, and battle tools. 
-Used by 50+ users during internal testing. GitHub 
-
-Diffie-Hellman Demo – React, TS, Web Crypto API 
-Interactive key exchange visualizer with MITM simulation and real-time cryptographic 
-benchmarking. 
-Integrated in educational demos at ACM Student Chapter meetups. GitHub
-
-COURSES & ACHIEVEMENTS 
-Pokémon World Championships 2025 Invite (Regional Winner) 
-Generative AI (Amazon/Coursera), DSA in Java (PW Skills), 400+ LeetCode
-
-LEADERSHIP 
-Senior Coordinator in Code<I/O> | ACM Chapter Member – BMSCE`
-
-    const blob = new Blob([resumeContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
     const link = document.createElement("a")
-    link.href = url
-    link.download = "Govind_Singh_Resume.txt"
+    link.href = "/resume/Govind Singh.pdf"
+    link.download = "Govind_Singh_Resume.pdf"
+    link.target = "_blank"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
   }
 
   return (

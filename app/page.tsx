@@ -46,7 +46,7 @@ export default function Portfolio() {
   const downloadResume = () => {
     // Create a link element to download the PDF
     const link = document.createElement("a")
-    link.href = "/resume/Govind_Singh_Resume.pdf"
+    link.href = "/resume/Govind Singh.pdf"
     link.download = "Govind_Singh_Resume.pdf"
     link.target = "_blank"
     
