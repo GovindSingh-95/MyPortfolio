@@ -101,6 +101,18 @@ export default function Portfolio() {
       tier: "featured",
       highlight: "Real-time Platform • High-concurrency • Low-latency"
     },
+    {
+      id: 13,
+      name: "Spatiotemporal Semantic Change Detection Platform",
+      description: "Developing a deep learning computer vision pipeline using a Teacher-Student paradigm to isolate semantic environmental shifts in dual-temporal satellite imagery (t1, t2).",
+      image: "/projects/semantic-change-detection.png",
+      technologies: ["Deep Learning", "Computer Vision", "Python", "TensorFlow", "Satellite Imagery"],
+      live: undefined,
+      github: undefined,
+      tier: "featured",
+      highlight: "Research Project • AI/ML • Currently Developing",
+      status: "Developing"
+    },
     // 🚀 TIER 2: CONCEPT LEARNING PROJECTS
     {
       id: 2,
@@ -212,11 +224,11 @@ export default function Portfolio() {
 
   const skills = {
     languages: ["JavaScript (ES6+)", "TypeScript", "Java", "Python", "C"],
-    frameworks: ["React", "Next.js", "Node.js", "Express", "Redux Toolkit", "Socket.io"],
+    frameworks: ["React", "Next.js", "Node.js", "Express", "Redux Toolkit", "Socket.io", "Python and PyTorch"],
     ui: ["Tailwind CSS", "shadcn/ui"],
     databases: ["MongoDB", "PostgreSQL", "Supabase", "Firebase (Firestore)"],
     tools: ["Docker", "Git", "GitHub Actions (CI/CD)", "Postman", "Linux"],
-    concepts: ["REST APIs", "PWA", "Web Crypto API", "AI/LLM Integration", "Blockchain", "Razorpay Integration"],
+    concepts: ["REST APIs", "PWA", "Web Crypto API", "AI/LLM Integration", "Blockchain", "Razorpay Integration", "Computer Vision", "Deep Learning", "Spatiotemporal Modeling"],
   }
 
   const scrollToSection = (sectionId: string) => {
